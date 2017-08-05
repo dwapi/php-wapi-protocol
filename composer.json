@@ -10,6 +10,6 @@
     ],
     "require": { },
     "autoload": {
-        "psr-4": {"Wapi\\": "src"}
+        "psr-4": {"Wapi\\Protocol\\": "src"}
     }
 }

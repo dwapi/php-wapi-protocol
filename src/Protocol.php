@@ -1,6 +1,6 @@
 <?php
 
-namespace Wapi;
+namespace Wapi\Protocol;
 
 
 /**
