@@ -33,10 +33,10 @@ class Protocol {
     return base64_encode(hash("sha256",  $secret . $string, TRUE));
   }
   
-  static function verifyClock(array $body, $threshold = 15) {
+  static function verifyClock(array $body, $threshold = 15, $offset = 0) {
     if(isset($body['timestamp'])) {
       $time = $body['timestamp'];
-      return abs(microtime(TRUE) - $time) < $threshold;
+      return abs(microtime(TRUE) - $time - $offset) < $threshold;
     }
   
     return FALSE;
