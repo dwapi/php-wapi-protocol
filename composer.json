@@ -1,0 +1,15 @@
+{
+    "name": "nyariv/wapi-protocol",
+    "description": "WAPI messaging protocol.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nir Yariv",
+            "email": "nir@dofinity.com"
+        }
+    ],
+    "require": { },
+    "autoload": {
+        "psr-4": {"Wapi\\": "src"}
+    }
+}
