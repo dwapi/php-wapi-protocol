@@ -2,7 +2,7 @@
 
 namespace Wapi\Protocol\Exception;
 
-class WapiException extends \Exception {
+class WapiProtocolException extends \Exception {
   const CODE = 1;
   const MESSAGE = 'Error';
   

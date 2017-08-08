@@ -2,7 +2,7 @@
 
 namespace Wapi\Protocol\Exception;
 
-class IncompleteConfiguration extends WapiException  {
+class IncompleteConfiguration extends WapiProtocolException  {
   const CODE = 3;
   const MESSAGE = 'Incomplete configuration.';
 }
