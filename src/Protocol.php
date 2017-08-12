@@ -16,10 +16,10 @@ class Protocol {
     return json_encode($body);
   }
   
-  static function buildMessage($secret, $method, $data, $clock_offset = 0) {
+  static function buildMessage($secret, $method, $data, array $additional = [], $clock_offset = 0) {
     $time = microtime(TRUE) + $clock_offset;
     $message_id = static::randomBytesBase64();
-    $body = [
+    $body = $additional + [
       'message_id' => $message_id,
       'method' => $method,
       'timestamp' => $time,
