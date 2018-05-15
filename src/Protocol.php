@@ -17,7 +17,7 @@ class Protocol {
   }
   
   static function buildMessage($secret, $method, $data, array $additional = [], $clock_offset = 0) {
-    $time = microtime(TRUE) + $clock_offset;
+    $time = microtime(TRUE) - $clock_offset;
     $message_id = static::randomBytesBase64();
     $body = $additional + [
       'message_id' => $message_id,
